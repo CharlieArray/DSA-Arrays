@@ -74,14 +74,40 @@ function main(){
     arr.pop();
     arr.pop();
     arr.pop();
-     console.log("this is arr after pop", arr)
-     console.log("1st item", arr.get(1))
-    arr.remove(0)
-    arr.remove(1)
-    console.log("arr should be empty:", arr.get(0))
-    arr.set()
-
+    arr.pop();
+    arr.pop();
+    arr.pop();
+    arr.push('tauhida')
+    console.log("arr with tauhida:", arr)
 
 }
-
 main()
+
+
+function URLtoString(){
+    const urlString = "tauhida parveen"
+
+    //input is string, goal is to make white space == %20
+    //split string into multiple chars  .split()
+    //loop through chars
+    //if " " == true => " " = %20
+    //join
+
+    let splitArray = urlString.split(" ") 
+    console.log(splitArray)
+ 
+
+    let result = [];
+    for(let i = 0; i < splitArray.length; i++){
+
+        if(splitArray[i]  == splitArray.length ){
+            return result.push(splitArray[i])
+        }
+
+        result.push(splitArray[i]+'%20')
+    }
+    result.join('')
+    console.log('this is result', result)
+}
+URLtoString()
+
