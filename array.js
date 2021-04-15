@@ -1,6 +1,16 @@
 var memory= require('./memory')
 var Memory = new memory()
 
+//complexity for array
+//search complexity => linear search or binary; worst case O(1)
+//[0,1,2,3,4,6] => O(1)
+
+//Arrays vs Linked Lists
+//Array Cons: Inserting array difficult because you have to shift all the values
+//Array Pro: Searching is easy
+//Linked List Pro: Inserting good
+//Linked List Cons: Searching difficult because data not connected in order
+
 class Array {
     constructor() {
         this.length = 0;
@@ -98,15 +108,8 @@ function URLtoString(){
  
 
     let result = [];
-    for(let i = 0; i < splitArray.length; i++){
-
-        if(splitArray[i]  == splitArray.length ){
-            return result.push(splitArray[i])
-        }
-
-        result.push(splitArray[i]+'%20')
-    }
-    result.join('')
+    
+    result = splitArray.join("%20")
     console.log('this is result', result)
 }
 URLtoString()
